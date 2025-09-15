@@ -44,41 +44,35 @@ module.exports = (broadcast) => {
         }
     });
 
-    // POST new sensor data
-    // Route 1: Only MQ2 sensor
-    router.post('/sensors1', async (req, res) => {
-        const { mq2 } = req.body;
-        try {
-            console.log("data recieved succesfully");
-            const newData = new SensorData({ mq2 });
-            const savedData = await newData.save();
-            broadcast(savedData);
 
-            if (mq2 > 500) sendAlert('High Gas Level Detected!', `MQ2 value: ${mq2}`);
+router.post('/sensors', async (req, res) => {
+    const { mq2, temperature, humidity, pir, ir } = req.body;
 
-            res.status(201).json(savedData);
-        } catch (err) {
-            res.status(400).json({ message: err.message });
+    try {
+        console.log("Data received successfully:", req.body);
+
+        const newData = new SensorData({ mq2, temperature, humidity, pir, ir });
+        const savedData = await newData.save();
+        broadcast(savedData);
+
+        // Alerts
+        if (mq2 !== undefined && mq2 > 500) {
+            sendAlert('High Gas Level Detected!', `MQ2 value: ${mq2}`);
         }
-    });
-
-    // Route 2: Temperature, Humidity, PIR, IR
-    router.post('/sensors2', async (req, res) => {
-        const { temperature, humidity, pir, ir } = req.body;
-        try {
-            const newData = new SensorData({ temperature, humidity, pir, ir });
-            const savedData = await newData.save();
-            broadcast(savedData);
-
-            if (temperature > 35) sendAlert('High Temperature Detected!', `Temperature: ${temperature}°C`);
-            if (pir) sendAlert('Motion Detected!', 'PIR sensor triggered');
-            if (ir) sendAlert('Object Detected!', 'IR sensor triggered');
-
-            res.status(201).json(savedData);
-        } catch (err) {
-            res.status(400).json({ message: err.message });
+        if (temperature !== undefined && temperature > 35) {
+            sendAlert('High Temperature Detected!', `Temperature: ${temperature}°C`);
         }
-    });
+        if (pir) {
+            sendAlert('Motion Detected!', 'PIR sensor triggered');
+        }
+        if (ir) {
+            sendAlert('Object Detected!', 'IR sensor triggered');
+        }
 
-    return router;  // <-- make sure this is inside the arrow function
-};  // <-- final closing brace for module.exports arrow function
+        res.status(201).json(savedData);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+});
+
+return router;

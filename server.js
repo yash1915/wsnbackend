@@ -34,8 +34,32 @@ db.once('open', () => {
 });
 
 // WebSocket Connection
+// In server.js
+
 wss.on('connection', (ws) => {
     console.log('Client connected');
+
+    // --- ADD THIS CODE ---
+    // Listen for messages from clients (like your ESP8266)
+    ws.on('message', async (message) => {
+        try {
+            const data = JSON.parse(message);
+            console.log('Received data from client:', data);
+
+            // Save the data to the database
+            const sensorData = new SensorData(data);
+            const savedData = await sensorData.save();
+
+            // Broadcast the new data to all connected browser clients
+            broadcast(savedData);
+
+        } catch (error) {
+            console.error('Failed to process message:', error);
+        }
+    });
+    // --- END OF ADDED CODE ---
+
+
     ws.on('close', () => {
         console.log('Client disconnected');
     });

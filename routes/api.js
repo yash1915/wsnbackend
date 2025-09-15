@@ -11,6 +11,7 @@ module.exports = (broadcast) => {
             const data = await SensorData.findOne().sort({ timestamp: -1 });
             res.json(data);
         } catch (err) {
+                console.log("here is the error");
             res.status(500).json({ message: err.message });
         }
     });

@@ -76,3 +76,4 @@ router.post('/sensors', async (req, res) => {
 });
 
 return router;
+};

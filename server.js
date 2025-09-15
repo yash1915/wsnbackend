@@ -4,10 +4,18 @@ const http = require('http');
 const mongoose = require('mongoose');
 const WebSocket = require('ws');
 const bodyParser = require('body-parser');
+const cors = require('cors');  // <-- import cors
 
 const app = express();
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
+
+// --- CORS Middleware ---
+app.use(cors({
+    origin: 'https://wsnfrontend.netlify.app',  // allow only this frontend
+    methods: ['GET', 'POST'],
+    credentials: true
+}));
 
 // Middleware
 app.use(bodyParser.json());

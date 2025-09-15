@@ -49,6 +49,7 @@ module.exports = (broadcast) => {
     router.post('/sensors1', async (req, res) => {
         const { mq2 } = req.body;
         try {
+            console.log("data recieved succesfully");
             const newData = new SensorData({ mq2 });
             const savedData = await newData.save();
             broadcast(savedData);

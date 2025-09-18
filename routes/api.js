@@ -35,7 +35,7 @@ module.exports = (broadcast) => {
                     { mq2: { $gt: 500 } },
                     { temperature: { $gt: 35 } },
                     { pir: true },
-                    { ir: true }
+                    { ir: false }
                 ]
             }).sort({ timestamp: -1 });
             res.json(alerts);
@@ -65,7 +65,7 @@ router.post('/sensors', async (req, res) => {
         if (pir) {
             sendAlert('Motion Detected!', 'PIR sensor triggered');
         }
-        if (ir) {
+        if (!ir) {
             sendAlert('Object Detected!', 'IR sensor triggered');
         }
 

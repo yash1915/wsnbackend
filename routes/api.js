@@ -51,7 +51,7 @@ router.post('/sensors', async (req, res) => {
     try {
         console.log("Data received successfully:", req.body);
 
-        const newData = new SensorData({ mq2, temperature, humidity, pir, ir });
+        const newData = new SensorData({ mq2, temperature, humidity, pir, !ir });
         const savedData = await newData.save();
         broadcast(savedData);
 
@@ -66,7 +66,7 @@ router.post('/sensors', async (req, res) => {
             sendAlert('Motion Detected!', 'PIR sensor triggered');
         }
         if (!ir) {
-            sendAlert('Object Detected!', 'IR sensor triggered');
+            sendAlert('Fire detected!', 'IR sensor triggered');
         }
 
         res.status(201).json(savedData);

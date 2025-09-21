@@ -12,7 +12,7 @@ const wss = new WebSocket.Server({ server });
 
 // --- CORS Middleware ---
 app.use(cors({
-    origin: 'https://wsnfrontend.netlify.app',  // allow only this frontend
+    origin: 'https://wsnfrontend.vercel.app',  // allow only this frontend
     methods: ['GET', 'POST'],
     credentials: true
 }));

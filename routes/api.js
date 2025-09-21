@@ -35,7 +35,7 @@ module.exports = (broadcast) => {
                     { mq2: { $gt: 500 } },
                     { temperature: { $gt: 35 } },
                     { pir: true },
-                    { ir: false }
+                    { ir: false },
                 ]
             }).sort({ timestamp: -1 });
             res.json(alerts);
@@ -51,7 +51,7 @@ router.post('/sensors', async (req, res) => {
     try {
         console.log("Data received successfully:", req.body);
 
-        const newData = new SensorData({ mq2, temperature, humidity, pir, !ir });
+        const newData = new SensorData({ mq2, temperature, humidity, pir, ir });
         const savedData = await newData.save();
         broadcast(savedData);
 

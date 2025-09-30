@@ -23,7 +23,7 @@ const sendAlert = async (subject, text) => {
     // HTML content ko behtar banayein
     sendSmtpEmail.htmlContent = `
         <div style="font-family: Arial, sans-serif; border: 1px solid #dcdcdc; padding: 20px; border-radius: 5px;">
-            <h2 style="color: #c0392b;"> Sensor Alert! </h2>
+            <h2 style="color: #c0392b;"> 🔴Sensor Alert! </h2>
             <p style="font-size: 16px;"><strong>Alert Type:</strong> ${subject}</p>
             <p style="font-size: 16px;"><strong>Details:</strong> ${text}</p>
             <hr>

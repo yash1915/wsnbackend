@@ -105,7 +105,7 @@ This system acts as a **digital nervous system** for a facility. It uses a netwo
 
 | Hardware Prototype                                                                             |
 |------------------------------------------------------------------------------------------------|
-| ![Hardware](images/hardware.jpg)                                                               |
+| ![Hardware](images/hardware_.jpg)                                                               |
 
  
 

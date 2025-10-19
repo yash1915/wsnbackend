@@ -92,13 +92,13 @@ This system acts as a **digital nervous system** for a facility. It uses a netwo
 
 ## A Look Inside the Project 📸
 
-| Sensor Triggered Email             | Live Monitoring Dashboard                     |
-|------------------------------------|-----------------------------------------------|
-|![Email Alert](images/email.jpg)    | ![Live Dashboard](images/live_monitoring.jpg) |
+| Sensor Triggered Email                         | History & Trends Page                         | 
+|------------------------------------------------|-----------------------------------------------|
+|![Email Alert](images/email.jpg)                |![History](images/history.png)                 |
 
-| History & Trends Page              | Alerts Log                                    |
-|------------------------------------|-----------------------------------------------|
-| ![History](images/history.png)     |     ![Alerts](images/alert.jpg)               |
+|  Live Monitoring Dashboard                     | Alerts Log                                    |
+|------------------------------------------------|-----------------------------------------------|
+|![Live Dashboard](images/live_monitoring.jpg)   |     ![Alerts](images/alert.jpg)               |
 
 | Hardware Prototype                 |
 |------------------------------------|

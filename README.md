@@ -12,7 +12,7 @@ The system ensures immediate hazard response through an automated dual-alert sys
 
 >⚠️ Note: The live dashboard link works only when the hardware sensors are running.  
 > All features and alerts are also demonstrated through screenshots, email notifications, and this README.
-**Check out the live frontend dashboard here:** [[Frontend Repo](https://github.com/yash1915/wsnfrontend) or [Demo](https://wsnfrontend.vercel.app/)]
+**Check out the live frontend dashboard here:** [[Frontend Repo](https://github.com/yash1915/wsnfrontend) or [Live Demo](https://wsnfrontend.vercel.app/)]
 
 ---
 ## ⚙️ Hardware Components

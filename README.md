@@ -9,6 +9,9 @@ This is the backend repository for my final year project.
 This project is using an ESP32 to collect real-time data from gas, temperature, motion, and flame sensors. 
 A full-stack web dashboard, built with Node.js and MongoDB, provides live monitoring, historical data graphs, and a log of all triggered events. 
 The system ensures immediate hazard response through an automated dual-alert system, featuring on-site buzzer alarms and instant email notifications.
+
+>⚠️ Note: The live dashboard link works only when the hardware sensors are running.  
+> All features and alerts are also demonstrated through screenshots, email notifications, and this README.
 **Check out the live frontend dashboard here:** [[Frontend Repo](https://github.com/yash1915/wsnfrontend) or [Demo](https://wsnfrontend.vercel.app/)]
 
 ---

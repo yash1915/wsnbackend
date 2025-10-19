@@ -54,7 +54,8 @@ The system ensures immediate hazard response through an automated dual-alert sys
 Industrial workplaces often face hidden hazards such as:
 - Gas leaks  
 - Overheating machinery  
-- Unauthorized access  
+- Unauthorized access
+  
 Traditional periodic safety checks **cannot detect these instantly**, putting workers and machinery at risk.
 
 

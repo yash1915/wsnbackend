@@ -20,7 +20,7 @@ The system ensures immediate hazard response through an automated dual-alert sys
 - PIR Motion Sensor  
 - Buzzer  
 - LCD Display
-- 
+
 ---
 
 ## 💻 Software & Tech Stack
@@ -38,7 +38,6 @@ The system ensures immediate hazard response through an automated dual-alert sys
 ## 🧩 System Architecture
 [ Sensors ] → [ ESP32 ] → (Wi-Fi) → [ Node.js Server ] → [ MongoDB ] & [ WebSocket ] → [ Dashboard ]
 
-
 ---
 
 ##  Features
@@ -47,7 +46,7 @@ The system ensures immediate hazard response through an automated dual-alert sys
 - ✅ Web dashboard with live sensor readings  
 - ✅ History log of triggered events in MongoDB  
 - ✅ Scalable for multiple industrial zones
-- 
+  
 ---
 
 ## The Problem 🎯

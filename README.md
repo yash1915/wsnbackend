@@ -92,13 +92,18 @@ This system acts as a **digital nervous system** for a facility. It uses a netwo
 
 ## A Look Inside the Project 📸
 
- Hardware Prototype                                                                   
-![Hardware Photo](https://raw.githubusercontent.com/yash1915/wsnbackend/refs/heads/main/images/hardware.jpg)                
+| Hardware Prototype                 | Live Monitoring Dashboard                     |
+|------------------------------------|-----------------------------------------------|
+| ![Hardware](images/hardware.jpg)   | ![Live Dashboard](images/live_monitoring.jpg) |
 
-Live Monitoring Dashboard
-![Live Dashboard Screenshot](https://raw.githubusercontent.com/yash1915/wsnbackend/refs/heads/main/images/live%20monitoring.jpg)
-![History Page Screenshot](https://raw.githubusercontent.com/yash1915/wsnbackend/refs/heads/main/images/history.png)
-![Alerts Page Screenshot](https://raw.githubusercontent.com/yash1915/wsnbackend/refs/heads/main/images/alert.jpg) 
+| History & Trends Page              | Alerts Log                                    |
+|------------------------------------|-----------------------------------------------|
+| ![History](images/history.png)     |     ![Alerts](images/alert.jpg)               |
+
+| Sensor Triggered Email             |
+|------------------------------------|
+| ![Email Alert](images/email.jpg)   |
+
 
 ---
 

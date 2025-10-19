@@ -68,7 +68,7 @@ This system acts as a **digital nervous system** for a facility. It uses a netwo
 - **Live Monitoring:** Track all sensor readings in real-time  
 - **Historical Data:** Analyze past events to identify patterns and risks  
 - **Instant Alerts:** Receive immediate **email notifications** and **local buzzer alerts** when a hazard is detected
-- 
+  
 ---
 
 ## How It Works ⚙️
@@ -107,9 +107,6 @@ This system acts as a **digital nervous system** for a facility. It uses a netwo
 |------------------------------------------------------------------------------------------------|
 | ![Hardware](images/hardware_.jpg)                                                               |
 
- 
-
-
 ---
 
   ## Future Enhancements
@@ -129,7 +126,6 @@ It highlights skills in **embedded systems, full-stack web development, real-tim
 ## Running It Locally
 
 To get this backend running on your own machine:
-
 1.Clone the repositories:
 - Frontend: `git clone https://github.com/yash1915/wsnfrontend.git`
 - Backend: `git clone https://github.com/yash1915/wsnbackend.git`

@@ -103,9 +103,9 @@ This system acts as a **digital nervous system** for a facility. It uses a netwo
 |------------------------------------------------|-----------------------------------------------|
 |![Live Dashboard](images/live_monitoring.jpg)   |     ![Alerts](images/alert.jpg)               |
 
-| Hardware Prototype                 |
-|------------------------------------|
-| ![Hardware](images/hardware.jpg)   |
+| Hardware Prototype                                                                             |
+|------------------------------------------------------------------------------------------------|
+| ![Hardware](images/hardware.jpg)                                                               |
 
  
 
